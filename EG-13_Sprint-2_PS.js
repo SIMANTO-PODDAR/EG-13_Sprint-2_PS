@@ -26,6 +26,17 @@ function findMax(nums) {
 
 // 3. Check for Palindrome 
 function isPalindrome(str) {
+    let revstr = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        revstr = revstr + str[i]
+    }
+
+    if (str == revstr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
