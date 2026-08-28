@@ -12,6 +12,14 @@ function reverseString(str) {
 
 // 2. Find Maximum 
 function findMax(nums) {
+    let mxnum = nums[0];
+
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] > mxnum) {
+            mxnum = nums[i]
+        }
+    }
+    return mxnum
 }
 
 
