@@ -84,6 +84,16 @@ function twoSum(nums, target) {
 
 // 7. Flatten a Nested Array 
 function flattenArray(arr) {
+    let finalArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            finalArr = finalArr.concat(flattenArray(arr[i]))
+        } else {
+            finalArr.push(arr[i])
+        }
+    }
+    return finalArr
 }
 
 
