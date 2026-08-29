@@ -123,4 +123,16 @@ function lengthOfLongestSubstring(s) {
 
 // 10. Deep Clone an Object 
 function deepClone(obj) {
+    const clnObj = {};
+
+    for (let key in obj) {
+
+        if (typeof obj[key] === "object" && obj[key] !== null) {
+            clnObj[key] = deepClone(obj[key])
+        }
+        else {
+            clnObj[key] = obj[key]
+        }
+    }
+    return clnObj
 }
