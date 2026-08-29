@@ -71,6 +71,13 @@ function countVowels(str) {
 
 // 6. Two Sum 
 function twoSum(nums, target) {
+    for (const fn in nums) {
+        for (const sn in nums) {
+            if (+sn != +fn && nums[fn] + nums[sn] === target) {
+                return [+fn, +sn];
+            }
+        }
+    }
 }
 
 
