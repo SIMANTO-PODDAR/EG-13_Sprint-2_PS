@@ -55,6 +55,16 @@ function sumArray(nums) {
 
 // 5. Count Vowels 
 function countVowels(str) {
+    str = str.toLowerCase();
+    const allVowels = ['a', 'e', 'i', 'o', 'u'];
+    let count = 0
+
+    for (let i = 0; i < str.length; i++) {
+        if (allVowels.includes(str[i])) {
+            count++
+        }
+    }
+    return count
 }
 
 
