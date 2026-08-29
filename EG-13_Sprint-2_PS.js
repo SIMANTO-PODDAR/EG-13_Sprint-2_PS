@@ -100,6 +100,17 @@ function flattenArray(arr) {
 
 // 8. Group Anagrams 
 function groupAnagrams(strs) {
+    let groups = {};
+    for (let word of strs) {
+
+        let key = word.split("").sort().join("");
+
+        if (groups[key] === undefined) {
+            groups[key] = []
+        }
+        groups[key].push(word)
+    }
+    return Object.values(groups)
 }
 
 
